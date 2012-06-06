@@ -1,0 +1,18 @@
+<div class="row-fluid">
+  <!-- without left menu -->
+  <% # erb :left_menu%> 
+
+  <div class="span12"> <!-- use 'span9' with left menu -->
+    <div class="hero-unit">
+      <h1>Текстовый квест</h1>
+      <p>
+      Квесты:
+        <ul>
+        <% @demos.each do |name| %>
+          <li><a href="/if?url=<%= @storage_base_url %>/<%= name%>"><%= name %></a></li>
+        <% end %>
+        </ul>
+      </p>
+    </div>
+  </div><!--/span-->
+</div><!--/row-->
